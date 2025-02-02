@@ -212,7 +212,7 @@ return (
                             <div className="w-3 h-3 rounded-full bg-yellow-500" />
                             <div className="w-3 h-3 rounded-full bg-green-500" />
                         </div>
-                        <div className="flex-1 text-center text-sm font-mono">portfolio.sh</div>
+                        <div className="flex-1 text-center text-sm font-mono">yuvraj-portfolio.sh</div>
                     </div>
                     <div id="terminal" className="h-[80vh] overflow-y-auto p-4 font-mono text-sm" style={{ scrollbarWidth: 'none' }}>
                         {visibleLines.map((line, index) => (
