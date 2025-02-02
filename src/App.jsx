@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Database, Server, Code, Mail, ExternalLink } from 'lucide-react';
+import { Terminal, Database, Server, Code, Mail, ExternalLink, Instagram } from 'lucide-react';
 
 const TerminalPortfolio = () => {
     const [visibleLines, setVisibleLines] = useState([]);
@@ -24,8 +24,9 @@ const TerminalPortfolio = () => {
                 <div className="space-y-2">
                 <div className="text-blue-400 font-bold text-xl">Backend Developer</div>
                 <div className="text-gray-300">
-                I'm a Django backend developer with a passion for building robust and scalable web applications.
-                I specialize in creating efficient APIs, database optimization, and server-side architecture.
+                I'm a Django backend developer with experience in building scalable web applications
+                with efficient APIs, database optimization, and server-side architecture.
+                Along with that, I also have experience in frontend development.
                 </div>
                 </div>
             )
@@ -33,13 +34,13 @@ const TerminalPortfolio = () => {
         skills: {
             output: (
                 <div className="space-y-4">
-                <div className="text-yellow-400 font-bold">Backend Development</div>
+                <div className="text-yellow-400 font-bold">Backend Skills</div>
                 <div className="grid grid-cols-2 gap-4">
                 {[
-                    { name: 'Django', level: 90 },
+                    { name: 'Django', level: 85 },
                     { name: 'Python', level: 90 },
                     { name: 'SQL', level: 80 },
-                    { name: 'RESTful APIs', level: 85 },
+                    { name: 'RESTful APIs', level: 80 },
                 ].map((skill, index) => (
                     <div key={index} className="bg-gray-800 p-2 rounded">
                     <div className="flex justify-between text-sm">
@@ -85,40 +86,49 @@ const TerminalPortfolio = () => {
                 <div className="space-y-4">
                 {[
                     {
-                        title: 'E-commerce API',
-                        description: 'Built a scalable REST API using Django REST framework',
-                        tech: ['Django', 'PostgreSQL', 'Redis', 'Docker'],
-                        metrics: '500K+ monthly requests'
+                        title: 'LittleLemon',
+                        description: 'Built a restaurant web application using Django REST framework and React.',
+                        tech: ['Django', 'React', 'RestAPI', 'Full-Stack'],
+                        link: 'https://xerx81.github.io/LittleLemon/'
                     },
                     {
-                        title: 'Authentication System',
-                        description: 'Custom authentication system with JWT and social auth',
-                        tech: ['Django', 'OAuth2', 'JWT', 'Celery'],
-                        metrics: 'Used by 50K+ users'
+                        title: 'Hianime To Anilist',
+                        description: '[1000+ Monthly Traffic] Built a flask web app to help export anime list from hianime to anilist.',
+                        tech: ['Flask', 'Python', 'Web App'],
+                        link: 'https://hianimetoal.pythonanywhere.com/'
                     },
                     {
-                        title: 'Data Pipeline',
-                        description: 'Automated data processing pipeline for analytics',
-                        tech: ['Python', 'Apache Airflow', 'PostgreSQL'],
-                        metrics: 'Processes 1M+ records daily'
+                        title: 'LexiBot',
+                        description: 'Built a discord bot as a freelance project that can transcribe and translate videos by url.',
+                        tech: ['Python', 'API', 'Automation', 'Discord Bot'],
+                        link: 'https://github.com/Xerx81/Transcribe-X-Translate'
+                    },
+                    {
+                        title: 'Github',
+                        description: 'To see more of my projects, check out my github profile.',
+                        tech: ['Version Control', 'Git', 'Open Source'],
+                        link: 'https://github.com/Xerx81'
                     }
                 ].map((project, index) => (
                     <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-green-500 transition-colors">
-                    <div className="flex items-center gap-2">
-                    <Server className="text-green-500" size={20} />
-                    <h3 className="text-green-400 font-bold">{project.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mt-2">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                    {project.tech.map((tech, techIndex) => (
-                        <span key={techIndex} className="bg-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
-                        </span>
-                    ))}
-                    </div>
-                    <div className="text-green-300 text-sm mt-2">
-                    {project.metrics}
-                    </div>
+                        <div className="flex items-center gap-2">
+                            <Server className="text-green-500" size={20} />
+                            <h3 className="text-green-400 font-bold">{project.title}</h3>
+                        </div>
+                        <p className="text-gray-300 mt-2">{project.description}</p>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                            {project.tech.map((tech, techIndex) => (
+                                <span key={techIndex} className="bg-gray-700 text-xs px-2 py-1 rounded">
+                                {tech}
+                                </span>
+                            ))}
+                        </div>
+                        <div className="text-green-300 text-sm mt-2">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex flex-wrap gap-1">
+                                <ExternalLink className="text-green-500" size={15} />
+                                Link
+                            </a>
+                        </div>
                     </div>
                 ))}
                 </div>
@@ -128,13 +138,15 @@ const TerminalPortfolio = () => {
             output: (
                 <div className="space-y-3">
                 {[
-                    { icon: <Mail size={20} />, text: 'email@example.com', link: 'mailto:email@example.com' },
-                    { icon: <Code size={20} />, text: 'github.com/username', link: 'https://github.com/username' },
-                    { icon: <ExternalLink size={20} />, text: 'linkedin.com/in/username', link: 'https://linkedin.com/in/username' }
+                    { icon: <Mail size={20} />, text: 'ryuvraj832@gmail.com', link: 'mailto:ryuvraj832@gmail.com' },
+                    { icon: <Code size={20} />, text: 'github.com/Xerx81', link: 'https://github.com/Xerx81' },
+                    { icon: <ExternalLink size={20} />, text: 'LinkedIn', link: 'https://in.linkedin.com/in/yuvraj-singh-33599b308' }
                 ].map((contact, index) => (
                     <a
                     key={index}
                     href={contact.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-3 bg-gray-800 p-3 rounded hover:bg-gray-700 transition-colors"
                     >
                     {contact.icon}
@@ -210,6 +222,7 @@ const TerminalPortfolio = () => {
         <div
         id="terminal"
         className="h-[80vh] overflow-y-auto p-4 font-mono text-sm"
+        style={{ scrollbarWidth: 'none' }} 
         >
         {visibleLines.map((line, index) => (
             <div key={index} className="mb-2">
