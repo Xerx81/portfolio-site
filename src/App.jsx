@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Server, Code, Mail, ExternalLink } from 'lucide-react';
+import { Server, Code, Mail, ExternalLink, GitBranch, Monitor, Network } from 'lucide-react';
 
 const TerminalPortfolio = () => {
     const [visibleLines, setVisibleLines] = useState([]);
@@ -14,6 +14,7 @@ const TerminalPortfolio = () => {
                     <br />• about - Learn about me
                     <br />• skills - View my technical skills
                     <br />• projects - See my projects
+                    <br />• tools - View my development setup
                     <br />• contact - Get my contact info
                     <br />• clear - Clear the terminal
                 </div>
@@ -131,6 +132,51 @@ const TerminalPortfolio = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+            )
+        },
+        tools: {
+            output: (
+                <div className="space-y-4">
+                    <div className="text-purple-400 font-bold">Development Tools</div>
+                    <div className="grid grid-cols-2 gap-4">
+                        {[
+                            {
+                                category: "Operating System",
+                                tools: [
+                                    { name: "Ubuntu Linux", icon: <Monitor size={18} /> }
+                                ]
+                            },
+                            {
+                                category: "Editor",
+                                tools: [
+                                    { name: "Neovim", icon: <Code size={18} /> }
+                                ]
+                            },
+                            {
+                                category: "Version Control",
+                                tools: [
+                                    { name: "Git", icon: <GitBranch size={18} /> }
+                                ]
+                            },
+                            {
+                                category: "API Testing",
+                                tools: [
+                                    { name: "Insomnia", icon: <Network size={18} /> }
+                                ]
+                            }
+                        ].map((category, index) => (
+                            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition-colors">
+                                <div className="text-purple-300 font-medium mb-2">{category.category}</div>
+                                {category.tools.map((tool, toolIndex) => (
+                                    <div key={toolIndex} className="flex items-center gap-2 text-gray-300">
+                                        {tool.icon}
+                                        <span>{tool.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )
         },
