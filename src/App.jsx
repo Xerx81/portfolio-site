@@ -38,10 +38,12 @@ const TerminalPortfolio = () => {
                     <div className="text-yellow-400 font-bold">Backend Skills</div>
                     <div className="grid grid-cols-2 gap-4">
                         {[
-                            { name: 'Django', level: 85 },
                             { name: 'Python', level: 90 },
+                            { name: 'GO', level: 10 },
+                            { name: 'Django/Flask', level: 85 },
                             { name: 'SQL', level: 80 },
                             { name: 'RESTful APIs', level: 80 },
+                            { name: 'Docker', level: 60 },
                         ].map((skill, index) => (
                             <div key={index} className="bg-gray-800 p-2 rounded">
                                 <div className="flex justify-between text-sm">
@@ -63,7 +65,7 @@ const TerminalPortfolio = () => {
                             { name: 'HTML/CSS', level: 70 },
                             { name: 'JavaScript', level: 65 },
                             { name: 'React', level: 55 },
-                            { name: 'Tailwind', level: 50 },
+                            { name: 'Bootstrap/Tailwind', level: 50 },
                         ].map((skill, index) => (
                             <div key={index} className="bg-gray-800 p-2 rounded">
                                 <div className="flex justify-between text-sm">
@@ -87,6 +89,12 @@ const TerminalPortfolio = () => {
                 <div className="space-y-4">
                     {[
                         {
+                            title: 'Bookstore',
+                            description: 'A Django-powered web application for managing bookstore operations, featuring user authentication, book cataloging, and media integration.',
+                            tech: ['Django', 'Docker', 'Postgresql', 'Web App'],
+                            link: 'https://github.com/Xerx81/Bookstore',
+                        },
+                        {
                             title: 'LittleLemon',
                             description: 'Built a restaurant web application using Django REST framework and React.',
                             tech: ['Django', 'React', 'RestAPI', 'Full-Stack'],
@@ -103,6 +111,18 @@ const TerminalPortfolio = () => {
                             description: 'Built a discord bot as a freelance project that can transcribe and translate videos by url.',
                             tech: ['Python', 'API', 'Automation', 'Discord Bot'],
                             link: 'https://github.com/Xerx81/Transcribe-X-Translate'
+                        },
+                        {
+                            title: 'Bidzar',
+                            description: 'Bidzar is a Django-based web application for online auctions.',
+                            tech: ['Django', 'Sqlite', 'Web App'],
+                            link: 'https://bidzar.pythonanywhere.com/'
+                        },
+                        {
+                            title: 'Tentips',
+                            description: 'A web app made using flask framework which contains ten tips from a large library of books.',
+                            tech: ['Flask', 'Sqlite', 'Web App'],
+                            link: 'https://tentips.pythonanywhere.com/'
                         },
                         {
                             title: 'Github',
@@ -144,7 +164,7 @@ const TerminalPortfolio = () => {
                             {
                                 category: "Operating System",
                                 tools: [
-                                    { name: "Ubuntu Linux", icon: <Monitor size={18} /> }
+                                    { name: "Fedora Linux", icon: <Monitor size={18} /> }
                                 ]
                             },
                             {
