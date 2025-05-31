@@ -182,7 +182,7 @@ const TerminalPortfolio = () => {
                             {
                                 category: "API Testing",
                                 tools: [
-                                    { name: "Insomnia", icon: <Network size={18} /> }
+                                    { name: "Postman", icon: <Network size={18} /> }
                                 ]
                             }
                         ].map((category, index) => (
