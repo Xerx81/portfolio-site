@@ -23,11 +23,12 @@ const TerminalPortfolio = () => {
         about: {
             output: (
                 <div className="space-y-2">
-                    <div className="text-blue-400 font-bold text-xl">Backend Developer</div>
+                    <div className="text-blue-400 font-bold text-xl">Full-Stack Developer</div>
                     <div className="text-gray-300">
-                        I'm a Django backend developer with experience in building scalable web applications
-                        with efficient APIs, database optimization, and server-side architecture.
-                        Along with that, I also have experience in frontend development.
+                        I'm a Full-Stack Developer with experience building scalable web applications
+                        and RESTful APIs using Django, Flask, and FastAPI. I have also worked with React on full-stack projects,
+                        contributed to freelance client codebases, and built Python automation tools and bots.
+                        I use tools like Docker, Git, and AI-assisted development to write clean, efficient code.
                     </div>
                 </div>
             )
@@ -40,7 +41,7 @@ const TerminalPortfolio = () => {
                         {[
                             { name: 'Python', level: 90 },
                             { name: 'GO', level: 10 },
-                            { name: 'Django/Flask', level: 85 },
+                            { name: 'Django/Flask/FastAPI', level: 85 },
                             { name: 'SQL', level: 80 },
                             { name: 'RESTful APIs', level: 80 },
                             { name: 'Docker', level: 60 },
@@ -64,7 +65,7 @@ const TerminalPortfolio = () => {
                         {[
                             { name: 'HTML/CSS', level: 70 },
                             { name: 'JavaScript', level: 65 },
-                            { name: 'React', level: 55 },
+                            { name: 'React', level: 65 },
                             { name: 'Bootstrap/Tailwind', level: 50 },
                         ].map((skill, index) => (
                             <div key={index} className="bg-gray-800 p-2 rounded">
@@ -168,7 +169,7 @@ const TerminalPortfolio = () => {
                                 ]
                             },
                             {
-                                category: "Editor",
+                                category: "Text Editor",
                                 tools: [
                                     { name: "Neovim", icon: <Code size={18} /> }
                                 ]
