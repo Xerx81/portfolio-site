@@ -35,52 +35,45 @@ const TerminalPortfolio = () => {
         },
         skills: {
             output: (
-                <div className="space-y-4">
-                    <div className="text-yellow-400 font-bold">Backend Skills</div>
-                    <div className="grid grid-cols-2 gap-4">
-                        {[
-                            { name: 'Python', level: 90 },
-                            { name: 'GO', level: 10 },
-                            { name: 'Django/Flask/FastAPI', level: 85 },
-                            { name: 'SQL', level: 80 },
-                            { name: 'RESTful APIs', level: 80 },
-                            { name: 'Docker', level: 60 },
-                        ].map((skill, index) => (
-                            <div key={index} className="bg-gray-800 p-2 rounded">
-                                <div className="flex justify-between text-sm">
-                                    <span>{skill.name}</span>
-                                    <span>{skill.level}%</span>
-                                </div>
-                                <div className="w-full bg-gray-700 h-2 rounded-full mt-1">
-                                    <div
-                                        className="bg-green-500 h-2 rounded-full transition-all duration-1000"
-                                        style={{ width: `${skill.level}%` }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
+                <div className="space-y-6">
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-yellow-400 transition-colors">
+                        <div className="text-yellow-400 font-bold mb-3 flex items-center gap-2">
+                            <Code size={18} />
+                            Backend Skills
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                            {[
+                                'Python',
+                                'GO',
+                                'Django/Flask/FastAPI',
+                                'SQL',
+                                'RESTful APIs',
+                                'Docker'
+                            ].map((skill, index) => (
+                                <span key={index} className="bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-sm">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
                     </div>
-                    <div className="text-yellow-400 font-bold mt-4">Frontend Skills</div>
-                        <div className="grid grid-cols-2 gap-4">
-                        {[
-                            { name: 'HTML/CSS', level: 70 },
-                            { name: 'JavaScript', level: 65 },
-                            { name: 'React', level: 65 },
-                            { name: 'Bootstrap/Tailwind', level: 50 },
-                        ].map((skill, index) => (
-                            <div key={index} className="bg-gray-800 p-2 rounded">
-                                <div className="flex justify-between text-sm">
-                                    <span>{skill.name}</span>
-                                    <span>{skill.level}%</span>
-                                </div>
-                                <div className="w-full bg-gray-700 h-2 rounded-full mt-1">
-                                    <div
-                                    className="bg-blue-500 h-2 rounded-full transition-all duration-1000"
-                                    style={{ width: `${skill.level}%` }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
+                    
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-blue-400 transition-colors">
+                        <div className="text-blue-400 font-bold mb-3 flex items-center gap-2">
+                            <Monitor size={18} />
+                            Frontend Skills
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                            {[
+                                'HTML/CSS',
+                                'JavaScript',
+                                'React',
+                                'Bootstrap/Tailwind'
+                            ].map((skill, index) => (
+                                <span key={index} className="bg-blue-400 text-blue-900 px-3 py-1 rounded-full text-sm">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             )
@@ -132,27 +125,27 @@ const TerminalPortfolio = () => {
                             link: 'https://github.com/Xerx81'
                         }
                     ].map((project, index) => (
-                        <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-green-500 transition-colors">
-                            <div className="flex items-center gap-2">
-                                <Server className="text-green-500" size={20} />
-                                <h3 className="text-green-400 font-bold">{project.title}</h3>
+                            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-green-500 transition-colors">
+                                <div className="flex items-center gap-2">
+                                    <Server className="text-green-500" size={20} />
+                                    <h3 className="text-green-400 font-bold">{project.title}</h3>
+                                </div>
+                                <p className="text-gray-300 mt-2">{project.description}</p>
+                                <div className="flex flex-wrap gap-2 mt-2">
+                                    {project.tech.map((tech, techIndex) => (
+                                        <span key={techIndex} className="bg-gray-700 text-xs px-2 py-1 rounded">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className="text-green-300 text-sm mt-2">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex flex-wrap gap-1">
+                                        <ExternalLink className="text-green-500" size={15} />
+                                        Link
+                                    </a>
+                                </div>
                             </div>
-                            <p className="text-gray-300 mt-2">{project.description}</p>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                                {project.tech.map((tech, techIndex) => (
-                                    <span key={techIndex} className="bg-gray-700 text-xs px-2 py-1 rounded">
-                                    {tech}
-                                    </span>
-                                ))}
-                            </div>
-                            <div className="text-green-300 text-sm mt-2">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex flex-wrap gap-1">
-                                    <ExternalLink className="text-green-500" size={15} />
-                                    Link
-                                </a>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
                 </div>
             )
         },
@@ -187,16 +180,16 @@ const TerminalPortfolio = () => {
                                 ]
                             }
                         ].map((category, index) => (
-                            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition-colors">
-                                <div className="text-purple-300 font-medium mb-2">{category.category}</div>
-                                {category.tools.map((tool, toolIndex) => (
-                                    <div key={toolIndex} className="flex items-center gap-2 text-gray-300">
-                                        {tool.icon}
-                                        <span>{tool.name}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
+                                <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition-colors">
+                                    <div className="text-purple-300 font-medium mb-2">{category.category}</div>
+                                    {category.tools.map((tool, toolIndex) => (
+                                        <div key={toolIndex} className="flex items-center gap-2 text-gray-300">
+                                            {tool.icon}
+                                            <span>{tool.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
                     </div>
                 </div>
             )
@@ -209,17 +202,17 @@ const TerminalPortfolio = () => {
                         { icon: <Code size={20} />, text: 'github.com/Xerx81', link: 'https://github.com/Xerx81' },
                         { icon: <ExternalLink size={20} />, text: 'LinkedIn', link: 'https://in.linkedin.com/in/yuvraj-singh-33599b308' }
                     ].map((contact, index) => (
-                        <a
-                            key={index}
-                            href={contact.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-3 bg-gray-800 p-3 rounded hover:bg-gray-700 transition-colors"
-                        >
-                            {contact.icon}
-                            <span>{contact.text}</span>
-                        </a>
-                    ))}
+                            <a
+                                key={index}
+                                href={contact.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 bg-gray-800 p-3 rounded hover:bg-gray-700 transition-colors"
+                            >
+                                {contact.icon}
+                                <span>{contact.text}</span>
+                            </a>
+                        ))}
                 </div>
             )
         },
@@ -269,7 +262,7 @@ const TerminalPortfolio = () => {
         }
     };
 
-return (
+    return (
         <div className="min-h-screen bg-gray-900 text-white p-4">
             <div className="max-w-4xl mx-auto">
                 <div className="bg-gray-800 rounded-lg overflow-hidden shadow-xl border border-gray-700">
